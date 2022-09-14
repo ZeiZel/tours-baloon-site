@@ -1,0 +1,19 @@
+*, ::after, ::before {
+	@extend %sizing;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: someOperations(5, 2) + px; // либо *1px
+}
+
+body {
+	background: $color-white;
+}
+
+.container {
+	margin: 0 auto;
+	width: 1440px;
+	background: #F7F7F7;
+}

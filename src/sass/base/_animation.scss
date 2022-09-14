@@ -1,0 +1,39 @@
+@keyframes fadeInTitle {
+	0% {
+		transform: translate(-10%);
+		opacity: 0;
+		color: rgba($color-brown-dark, 0.62);
+	}
+	60% {
+		transform: translate(3%);
+	}
+	100% {
+		transform: translate(0%);
+		opacity: 1;
+		color: white;
+	}
+}
+
+@keyframes fadeInSubtitle {
+	0% {
+		transform: translate(4%);
+		opacity: 0;
+		color: rgba(225, 97, 8, 0.62);
+	}
+	100% {
+		transform: translate(0%);
+		opacity: 1;
+		color: white;
+	}
+}
+
+@keyframes Up {
+	0% {
+		transform: translateY(20rem);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0%);
+		opacity: 1;
+	}
+}

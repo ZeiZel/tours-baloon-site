@@ -1,0 +1,74 @@
+.button {
+	&:link, &:visited { // Ссылка/посещён
+		@include style-link($color-gray);
+	}
+
+	padding: 1.5rem 4rem;
+	border-radius: 5rem;
+	background-color: $color-white;
+	position: relative;
+	font-size: 2rem;
+
+	&:hover { // Навёл
+		transform: translateY(-8px);
+		box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+		&::after {
+			transform: scale(1.2, 1.3);
+			opacity: 0;
+		}
+	}
+	&:active { // Нажал
+		transform: translateY(-0.5rem);
+		box-shadow: $box-shadow;
+	}
+	&::after {
+		content: ""; // Обязательное свойство
+		display: inline-block;
+		background-color: $color-white;
+		width: 100%;
+		height: 100%;
+		border-radius: 5rem;
+
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: -1;
+
+		transition: all .3s;
+	}
+
+	&_animation {
+		// Название - скорость анимации - тип кривой - задержка - и тд
+		overflow: hidden;
+
+		animation: Up 1s ease-in-out .7s;
+		transition: all .3s;
+		animation-fill-mode: backwards;
+		backface-visibility: hidden;
+		//animation-timing-function: ease-in-out;
+		//animation-duration: 1s;
+	}
+}
+
+.link-button {
+	display: inline-block;
+	padding: 1.5rem 1rem;
+	border-bottom: 1px solid $color-brown-light;
+
+	font-weight: 700;
+	color: $color-brown-light;
+	text-decoration: none;
+
+	transition: all .5s;
+
+	&:hover {
+		color: $color-white;
+		background-color: $color-brown-light;
+		transform: translate(10px);
+	}
+
+	&:active {
+		transform: translate(15px);
+		box-shadow: $box-shadow;
+	}
+}

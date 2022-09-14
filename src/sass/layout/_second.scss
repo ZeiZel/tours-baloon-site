@@ -1,0 +1,64 @@
+.second-section{
+	&__container{
+
+	}
+	&__title {
+		margin-bottom: 8rem;
+	}
+	
+	&__about {
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	&__link {
+
+	}
+
+	&__left-wrapper {
+		max-width: 53.2rem;
+	}
+
+	&__right-wrapper {
+		position: relative;
+		width: 60rem;
+	}
+	.right-wrapper {
+		&__img {
+			width: 70%;
+			position: absolute;
+			transition: all .2s;
+			border-radius: 5px;
+
+			outline-offset: 10px;
+			box-shadow: $box-shadow;
+			&:hover {
+				outline: 15px solid $color-brown-light;
+				transform: scale(1.1);
+				z-index: 100;
+			}
+		}
+
+		[src="img/tours-1.png"] {
+			top: -11px;
+			right: 202px;
+		}
+		[src="img/tours-2.png"] {
+			top: 58px;
+			right: 67px;
+		}
+		[src="img/tours-3.png"] {
+			top: 118px;
+			right: 270px;
+		}
+	}
+
+	.text-box {
+		&__title {
+			margin-bottom: 1rem;
+		}
+		&__text {
+			margin-bottom: 4rem;
+		}
+	}
+}
