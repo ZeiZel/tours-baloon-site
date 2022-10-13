@@ -1,0 +1,75 @@
+.feedback-card {
+	&__box {
+		width: 75%;
+		padding: 6rem;
+		margin: 0 auto;
+		margin-bottom: 8rem;
+		background: rgba($color-white, .75);
+		box-shadow: $box-shadow;
+
+		// Чтобы согнуть карточку
+		transform: skew(-15deg);
+		// отменим skew для вложенных элементов карточки
+		& > * {
+			transform: skew(15deg);
+		}
+
+		// Активация анимации на иконке при наведении на карточку
+		&:hover .feedback-card__img-capture {
+			opacity: 1;
+			transform: translate(-50%, -50%);
+		}
+
+		&:hover img {
+			transform: scale(1);
+			// Свойство filter хранит в себе много эффектов обработки фото
+			filter: blur(3px) brightness(70%);
+		}
+	}
+
+	&__img {
+		position: relative;
+
+		width: 15rem;
+		height: 15rem;
+
+		float: left;
+		border-radius: 100rem;
+		margin-right: 4rem;
+
+		// ! Это свойство закруглит текст вокруг
+		shape-outside: circle(50% at 50% 50%);
+		-webkit-shape-outside: circle(50% at 50% 50%);
+
+		// Скрываем фото под скруглениями figure
+		overflow: hidden;
+
+		// Это позволит вписать фото в размер figure
+		img {
+			height: 100%;
+			transform: scale(1.2);
+			transition: .5s all ease;
+		}
+
+		&-capture {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+
+			font-size: 2.4rem;
+			letter-spacing: .2rem;
+			font-weight: 400;
+			color: $color-white;
+
+			// настройка для анимации
+			opacity: 0;
+			transform: translate(-50%, -20%);
+			transition: .5s all ease;
+		}
+	}
+
+	&__title {
+		margin-bottom: 1rem;
+	}
+
+}

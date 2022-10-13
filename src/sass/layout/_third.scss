@@ -1,3 +1,51 @@
 .third-section {
+	padding: 21rem 0;
+	background: linear-gradient(90.05deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url("../img/bg-adventure.png") center/cover no-repeat;
+	clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
 
+	&__container {
+		text-align: center;
+	}
+
+	&__box-container {
+		display: inline-flex;
+		justify-content: space-between;
+		max-width: 114rem;
+	}
+
+	.adventure-card {
+		width: 24rem;
+		height: 30rem;
+
+		margin-right: 6rem;
+		border-radius: .5rem;
+		padding: 2.5rem;
+
+		text-align: center;
+		background-color: rgba($color-white, .8);
+		box-shadow: $box-shadow;
+
+		transition: all .5s;
+
+		&__img {
+			margin-bottom: 2.5rem;
+			transition: all .5s;
+			&:hover {
+				transform: scale(1.2);
+			}
+		}
+
+		&__title {
+			margin-bottom: 1rem;
+		}
+
+		&:last-child {
+			margin: 0;
+		}
+
+		&:hover {
+			transform: translateY(-.5rem);
+			background-color: rgba($color-white, 1);
+		}
+	}
 }
